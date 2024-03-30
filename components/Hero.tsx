@@ -35,7 +35,7 @@ export default function Hero() {
               _after={{
                 content: "''",
                 width: "full",
-                height: "30%",
+                height: "12%",
                 position: "absolute",
                 bottom: 1,
                 left: 0,

@@ -10,19 +10,16 @@ import {
 import { FaCopy, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 
-interface Props {
-  marginTop?: string;
-  isBlog?: boolean;
-}
-
-export const SocialShare = ({ marginTop, isBlog }: Props) => {
+export const SocialShare = () => {
   const toast = useToast();
   const toastId = "link-copied-toast";
 
-  const { onCopy } = useClipboard(window.location?.href);
+  const { onCopy } = useClipboard(
+    typeof window !== "undefined" ? window.location?.href : ""
+  );
 
   const onClick = (social?: "twitter" | "linkedin" | "facebook") => {
-    if (!window) return;
+    if (typeof window === "undefined") return;
 
     let url: URL | undefined;
     let title = window.document?.title;
@@ -83,7 +80,7 @@ export const SocialShare = ({ marginTop, isBlog }: Props) => {
       align='flex-start'
       justify='center'
       mb={"8px"}
-      mt={marginTop ?? "8px"}
+      mt={"8px"}
       w='fit-content'
       spacing={1}
     >

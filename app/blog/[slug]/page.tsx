@@ -1,5 +1,6 @@
 import { Metadata } from "next/types";
 import { BlogArticle } from "../../../components/BlogArticle";
+import NotFoundPage from "../../../components/NotFound";
 import { getAllPublished, getSinglePost } from "../../../libs/notion";
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 export async function generateStaticParams() {
   const posts = await getAllPublished();
 
-  return posts.map((post) => ({
+  return posts?.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -20,7 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // read route params
   const id = params.slug;
 
-  const { metadata } = await getSinglePost(decodeURI(id));
+  const { metadata } = (await getSinglePost(decodeURI(id))) || {};
+
+  if (!metadata) return {};
 
   return {
     metadataBase: new URL(`https://naturopathie.vercel.app/blog/${id}`),
@@ -40,6 +43,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const Page = async ({ params }: Props) => {
   const post = await getSinglePost(decodeURI(params.slug));
+
+  if (!post) {
+    return (
+      <div>
+        <NotFoundPage />
+      </div>
+    );
+  }
 
   return (
     <div>

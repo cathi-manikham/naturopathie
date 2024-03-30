@@ -1,7 +1,9 @@
-"use ser";
+"use server";
+
 import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
 import { NotionArticle } from "../types/notion";
+import { getPageMetaData } from "../utils/notion";
 const notion = new Client({
   auth: process.env.NEXT_PUBLIC_NOTION_TOKEN,
 });
@@ -11,154 +13,169 @@ const n2m = new NotionToMarkdown({
 });
 
 export const getAllPublished = async () => {
-  const myHeaders = new Headers();
-  myHeaders.append(
-    "Authorization",
-    `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`
-  );
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Notion-Version", "2022-02-22");
+  try {
+    const myHeaders = new Headers();
+    myHeaders.append(
+      "Authorization",
+      `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`
+    );
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Notion-Version", "2022-02-22");
 
-  const raw = JSON.stringify({
-    filter: {
-      or: [
-        {
-          property: "isPublished",
-          checkbox: {
-            equals: true,
+    const raw = JSON.stringify({
+      filter: {
+        or: [
+          {
+            property: "isPublished",
+            checkbox: {
+              equals: true,
+            },
           },
-        },
-      ],
-    },
-  });
-
-  const res = await fetch(
-    `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,
-    {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-
-      next: { revalidate: 60 },
-    }
-  );
-  const posts: { results: NotionArticle[] } = await res.json();
-
-  const allPosts = posts.results;
-
-  return allPosts.map((post: any) => {
-    return getPageMetaData(post);
-  });
-};
-
-export const getIsFeatured = async (): Promise<NotionArticle> => {
-  const posts = await notion.databases.query({
-    database_id: process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || "",
-    filter: {
-      property: "isFeatured",
-      checkbox: {
-        equals: true,
+        ],
       },
-    },
-    sorts: [
-      {
-        property: "Created",
-        direction: "descending",
-      },
-    ],
-  });
-
-  const featuredPost = posts.results[0];
-
-  return getPageMetaData(featuredPost);
-};
-
-const getPageMetaData = (post: any): NotionArticle => {
-  const getTags = (tags: Array<any>) => {
-    const allTags = tags.map((tag) => {
-      return tag.name;
     });
 
-    return allTags;
-  };
+    const res = await fetch(
+      `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,
+      {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
 
-  return {
-    id: post.id,
-    title: post.properties.Name.title[0].plain_text,
-    cover: getCover(post.cover),
-    tags: getTags(post.properties.Tags.multi_select),
-    description: post.properties.description?.rich_text[0]?.plain_text,
-    date: getToday(post.properties.Created.created_time),
-    slug: post.properties.slug.formula.string,
-  };
+        next: { revalidate: 60 },
+      }
+    );
+    const posts: { results: NotionArticle[] } = await res.json();
+
+    const allPosts = posts.results;
+
+    return allPosts?.map((post: any) => {
+      return getPageMetaData(post);
+    });
+  } catch (error) {
+    if (typeof error === "string") {
+      console.log(error);
+    } else if (error instanceof Error) {
+      console.log(error);
+    }
+  }
+};
+
+export const getIsFeatured = async () => {
+  try {
+    const myHeaders = new Headers();
+    myHeaders.append(
+      "Authorization",
+      `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`
+    );
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Notion-Version", "2022-02-22");
+
+    const raw = JSON.stringify({
+      filter: {
+        or: [
+          {
+            property: "isFeatured",
+            checkbox: {
+              equals: true,
+            },
+          },
+        ],
+      },
+      sorts: [
+        {
+          property: "Created",
+          direction: "descending",
+        },
+      ],
+    });
+
+    const res = await fetch(
+      `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,
+      {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+
+        next: { revalidate: 60 },
+      }
+    );
+    const posts: { results: NotionArticle[] } = await res.json();
+
+    const featuredPost = posts.results[0];
+
+    return getPageMetaData(featuredPost);
+  } catch (error) {
+    if (typeof error === "string") {
+      console.log(error);
+    } else if (error instanceof Error) {
+      console.log(error.message);
+    }
+  }
 };
 
 export const getSinglePost = async (slug: string) => {
-  const response = await notion.databases.query({
-    database_id: process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || "",
-    filter: {
-      property: "slug",
-      formula: {
-        string: {
-          equals: slug,
-        },
+  try {
+    const myHeaders = new Headers();
+    myHeaders.append(
+      "Authorization",
+      `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`
+    );
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Notion-Version", "2022-02-22");
+
+    const raw = JSON.stringify({
+      filter: {
+        or: [
+          {
+            property: "slug",
+            formula: {
+              string: {
+                contains: slug,
+              },
+            },
+          },
+        ],
       },
-    },
-  });
+      sorts: [
+        {
+          property: "Created",
+          direction: "descending",
+        },
+      ],
+    });
 
-  const page = response.results[0];
+    const res = await fetch(
+      `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,
+      {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
 
-  const metadata = getPageMetaData(page);
-  const mdBlocks = await n2m.pageToMarkdown(page.id);
-  const mdString = n2m.toMarkdownString(mdBlocks);
+        next: { revalidate: 60 },
+      }
+    );
 
-  return {
-    metadata,
-    markdown: mdString.parent,
-  };
+    const posts: { results: NotionArticle[] } = await res.json();
+
+    const page = posts.results[0];
+
+    const metadata = getPageMetaData(page);
+    const mdBlocks = await n2m.pageToMarkdown(page.id);
+    const mdString = n2m.toMarkdownString(mdBlocks);
+
+    return {
+      metadata,
+      markdown: mdString.parent,
+    };
+  } catch (error) {
+    if (typeof error === "string") {
+      console.log(error);
+    } else if (error instanceof Error) {
+      console.log(error);
+    }
+  }
 };
-
-function getToday(dateString: Date) {
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  let date = new Date();
-
-  if (dateString) {
-    date = new Date(dateString);
-  }
-
-  const day = date.getDate();
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  let today = `${month} ${day}, ${year}`;
-
-  return today;
-}
-
-export function getCover(cover: any) {
-  if (!cover) return "/no-image.png";
-  switch (cover.type) {
-    case "file":
-      return cover.file.url;
-
-    case "external":
-      return cover.external.url;
-
-    default:
-      return "/no-image.png";
-  }
-}

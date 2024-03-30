@@ -1,6 +1,7 @@
 import { Metadata } from "next/types";
 import { ArticlesList } from "../../components/ArticlesList";
 import BlogHero from "../../components/BlogHero";
+import NotFoundPage from "../../components/NotFound";
 import { RecentArticles } from "../../components/RecentArticles";
 import { getAllPublished, getIsFeatured } from "../../libs/notion";
 import styles from "../Layout.module.css";
@@ -23,6 +24,14 @@ export const metadata: Metadata = {
 export default async function Page() {
   const data = await getAllPublished();
   const featuredArticle = await getIsFeatured();
+
+  if (!data || !featuredArticle) {
+    return (
+      <div className={styles.layout}>
+        <NotFoundPage />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.layout}>

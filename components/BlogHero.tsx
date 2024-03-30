@@ -21,6 +21,14 @@ interface Props {
 
 const BlogHero = ({ data }: Props) => {
   const descriptionColor = useColorModeValue("gray.700", "gray.200");
+  const gradientColor = useColorModeValue(
+    "radial(green.600 1px, transparent 1px)",
+    "radial(green.500 1px, transparent 1px)"
+  );
+  if (!data || typeof data === "undefined") {
+    return null;
+  }
+
   return (
     <Container maxW={"7xl"} py='12'>
       <Box
@@ -55,10 +63,7 @@ const BlogHero = ({ data }: Props) => {
           </Box>
           <Box zIndex='1' width='100%' position='absolute' height='100%'>
             <Box
-              bgGradient={useColorModeValue(
-                "radial(green.600 1px, transparent 1px)",
-                "radial(green.500 1px, transparent 1px)"
-              )}
+              bgGradient={gradientColor}
               backgroundSize='20px 20px'
               opacity='0.4'
               height='100%'

@@ -13,7 +13,7 @@ export const RecentArticles = ({ data }: Props) => {
   const childRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
 
-  if (data.length < 3) return null;
+  if (typeof data === "undefined" || data.length < 3) return null;
 
   return (
     <Box

@@ -6,6 +6,7 @@ import { Testimonials } from "../components/Testimonials";
 import styles from "./Layout.module.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://naturopathie.vercel.app/"),
   title: "Accueil - Catherine Manikham | Naturopathe",
   description: ` Le naturopathe utilise des thérapies naturelles pour promouvoir la
     santé et le bien-être, en identifiant et en traitant les causes
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     "naturopathie, Approche holistique, Médecines naturelles, Soins individualisés,Catherine Manikham, Catherine, Manikham, bien-être, guérison naturelle",
   openGraph: {
     title: "Accueil - Catherine Manikham | Naturopathe",
+    type: "website",
     description: `Le naturopathe utilise des thérapies naturelles pour promouvoir la
       santé et le bien-être, en identifiant et en traitant les causes
       profondes des maladies.`,

@@ -23,11 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { metadata } = await getSinglePost(decodeURI(id));
 
   return {
+    metadataBase: new URL(`https://naturopathie.vercel.app/blog/${id}`),
     title: metadata.title ?? "sans titre",
     description: metadata.description ?? "sans description",
     keywords: metadata.tags.flatMap((e) => e.split(",")),
     openGraph: {
       title: metadata.title ?? "sans titre",
+      type: "article",
+      authors: "Catherine Manikham ",
       description: metadata.description ?? "sans description",
       images: metadata.cover,
     },

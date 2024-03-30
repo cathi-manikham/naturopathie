@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Bilan de vitalité (1h30), Massages relaxant de 45 minutes, Massages relaxant de 1 heure, faq, Questions fréquemment posées Contactez moi",
   openGraph: {
     title: "Tarifs & Contact  - Catherine Manikham | Naturopathe",
+    url: "https://naturopathie.vercel.app/pricing",
     type: "website",
     description: `Choisissez ce qui vous convient le mieux.Consultations à domicile dans un périmètre de 10 km autour de Châtenay-Malabry et à Paris.`,
     images: "/pricing.png",

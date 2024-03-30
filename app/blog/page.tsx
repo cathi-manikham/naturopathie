@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "naturopathie, naturopathie blog, blog, Approche holistique, Médecines naturelles, Soins individualisés,Catherine Manikham, Catherine, Manikham, bien-être, guérison naturelle",
   openGraph: {
     title: "Blog - Catherine Manikham | Naturopathe",
+    url: "https://naturopathie.vercel.app/blog",
     type: "website",
     description: `Découvrez les secrets de la naturopathie pour une vie saine et équilibrée. Des conseils naturels pour nourrir votre bien-être et revitaliser votre corps.`,
     images: "/blog.png",

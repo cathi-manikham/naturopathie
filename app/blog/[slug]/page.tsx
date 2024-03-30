@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: metadata.title ?? "sans titre",
       type: "article",
+      url: `https://naturopathie.vercel.app/blog/${id}`,
       authors: "Catherine Manikham ",
       description: metadata.description ?? "sans description",
       images: metadata.cover,

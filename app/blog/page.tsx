@@ -13,13 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog - Catherine Manikham | Naturopathe",
     description: `Découvrez les secrets de la naturopathie pour une vie saine et équilibrée. Des conseils naturels pour nourrir votre bien-être et revitaliser votre corps.`,
-    images: [
-      {
-        url: "/blog.png",
-        width: 800,
-        height: 600,
-      },
-    ],
+    images: "/blog.png",
   },
 };
 

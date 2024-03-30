@@ -12,13 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tarifs & Contact  - Catherine Manikham | Naturopathe",
     description: `Choisissez ce qui vous convient le mieux.Consultations à domicile dans un périmètre de 10 km autour de Châtenay-Malabry et à Paris.`,
-    images: [
-      {
-        url: "/pricing.png",
-        width: 800,
-        height: 600,
-      },
-    ],
+    images: "/pricing.png",
   },
 };
 

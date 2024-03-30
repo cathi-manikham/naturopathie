@@ -14,16 +14,10 @@ export const metadata: Metadata = {
     "naturopathie, Approche holistique, Médecines naturelles, Soins individualisés,Catherine Manikham, Catherine, Manikham, bien-être, guérison naturelle",
   openGraph: {
     title: "Accueil - Catherine Manikham | Naturopathe",
-    description: ` Le naturopathe utilise des thérapies naturelles pour promouvoir la
+    description: `Le naturopathe utilise des thérapies naturelles pour promouvoir la
       santé et le bien-être, en identifiant et en traitant les causes
       profondes des maladies.`,
-    images: [
-      {
-        url: "/blog.png",
-        width: 800,
-        height: 600,
-      },
-    ],
+    images: "/home.png",
   },
 };
 

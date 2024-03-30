@@ -27,15 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: metadata.description ?? "sans description",
     keywords: metadata.tags.flatMap((e) => e.split(",")),
     openGraph: {
-      title: metadata.title,
-      description: metadata.description,
-      images: [
-        {
-          url: metadata.cover ?? "https://via.placeholder.com/800x400",
-          width: 800,
-          height: 600,
-        },
-      ],
+      title: metadata.title ?? "sans titre",
+      description: metadata.description ?? "sans description",
+      images: metadata.cover,
     },
   };
 }

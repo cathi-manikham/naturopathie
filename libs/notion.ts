@@ -1,3 +1,4 @@
+"use ser";
 import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
 import { NotionArticle } from "../types/notion";
@@ -10,25 +11,43 @@ const n2m = new NotionToMarkdown({
 });
 
 export const getAllPublished = async () => {
-  const posts = await notion.databases.query({
-    database_id: process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || "",
+  const myHeaders = new Headers();
+  myHeaders.append(
+    "Authorization",
+    `Bearer ${process.env.NEXT_PUBLIC_NOTION_TOKEN}`
+  );
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Notion-Version", "2022-02-22");
+
+  const raw = JSON.stringify({
     filter: {
-      property: "isPublished",
-      checkbox: {
-        equals: true,
-      },
+      or: [
+        {
+          property: "isPublished",
+          checkbox: {
+            equals: true,
+          },
+        },
+      ],
     },
-    sorts: [
-      {
-        property: "Created",
-        direction: "descending",
-      },
-    ],
   });
+
+  const res = await fetch(
+    `https://api.notion.com/v1/databases/${process.env.NEXT_PUBLIC_NOTION_DATABASE_ID}/query`,
+    {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+
+      next: { revalidate: 60 },
+    }
+  );
+  const posts: { results: NotionArticle[] } = await res.json();
 
   const allPosts = posts.results;
 
-  return allPosts.map((post) => {
+  return allPosts.map((post: any) => {
     return getPageMetaData(post);
   });
 };

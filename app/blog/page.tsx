@@ -1,4 +1,5 @@
 import { Metadata } from "next/types";
+import { Suspense } from "react";
 import { ArticlesList } from "../../components/ArticlesList";
 import BlogHero from "../../components/BlogHero";
 import NotFoundPage from "../../components/NotFound";
@@ -34,10 +35,18 @@ export default async function Page() {
   }
 
   return (
-    <div className={styles.layout}>
-      <BlogHero data={featuredArticle} />
-      <RecentArticles data={data?.slice(1, 6)} />
-      <ArticlesList data={data} />
-    </div>
+    <Suspense
+      fallback={
+        <div className={styles.loading}>
+          <div className={styles.loader}></div>
+        </div>
+      }
+    >
+      <div className={styles.layout}>
+        <BlogHero data={featuredArticle} />
+        <RecentArticles data={data?.slice(1, 6)} />
+        <ArticlesList data={data} />
+      </div>
+    </Suspense>
   );
 }

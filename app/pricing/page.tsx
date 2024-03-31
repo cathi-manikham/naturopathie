@@ -1,4 +1,5 @@
 import { Metadata } from "next/types";
+import { Suspense } from "react";
 import { CancellationText } from "../../components/CancellationText";
 import ContactForm from "../../components/ContactForm";
 import PricingList from "../../components/PricingList";
@@ -22,11 +23,19 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className={styles.layout}>
-      <PricingList />
-      <CancellationText />
-      <FAQ />
-      <ContactForm />
-    </div>
+    <Suspense
+      fallback={
+        <div className={styles.loading}>
+          <div className={styles.loader}></div>
+        </div>
+      }
+    >
+      <div className={styles.layout}>
+        <PricingList />
+        <CancellationText />
+        <FAQ />
+        <ContactForm />
+      </div>
+    </Suspense>
   );
 }

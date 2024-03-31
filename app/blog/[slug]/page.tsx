@@ -1,8 +1,9 @@
 import { Metadata } from "next/types";
+import { Suspense } from "react";
 import { BlogArticle } from "../../../components/BlogArticle";
 import NotFoundPage from "../../../components/NotFound";
 import { getAllPublished, getSinglePost } from "../../../libs/notion";
-
+import styles from "../../Layout.module.css";
 interface Props {
   params: {
     slug: string;
@@ -69,9 +70,17 @@ const Page = async ({ params }: Props) => {
   }
 
   return (
-    <div>
-      <BlogArticle data={post.metadata} markDown={post.markdown} />
-    </div>
+    <Suspense
+      fallback={
+        <div className={styles.loading}>
+          <div className={styles.loader}></div>
+        </div>
+      }
+    >
+      <div>
+        <BlogArticle data={post.metadata} markDown={post.markdown} />
+      </div>
+    </Suspense>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Metadata } from "next/types";
+import { Suspense } from "react";
 import { Biography } from "../components/Biography";
 import Feature from "../components/Feature";
 import Formation from "../components/Formation";
@@ -27,12 +28,20 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className={styles.layout}>
-      <Hero />
-      <Feature />
-      <Biography />
-      <Formation />
-      <Testimonials />
-    </div>
+    <Suspense
+      fallback={
+        <div className={styles.loading}>
+          <div className={styles.loader}></div>
+        </div>
+      }
+    >
+      <div className={styles.layout}>
+        <Hero />
+        <Feature />
+        <Biography />
+        <Formation />
+        <Testimonials />
+      </div>
+    </Suspense>
   );
 }

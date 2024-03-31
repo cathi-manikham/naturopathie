@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { Naturopathie } from "../../components/Naturopathie";
 import styles from "../Layout.module.css";
 
@@ -23,8 +24,16 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div className={styles.layout}>
-      <Naturopathie />
-    </div>
+    <Suspense
+      fallback={
+        <div className={styles.loading}>
+          <div className={styles.loader}></div>
+        </div>
+      }
+    >
+      <div className={styles.layout}>
+        <Naturopathie />
+      </div>
+    </Suspense>
   );
 }

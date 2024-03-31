@@ -12,6 +12,8 @@ interface Props {
 export async function generateStaticParams() {
   const posts = await getAllPublished();
 
+  if (!posts) return [];
+
   return posts?.map((post) => ({
     slug: post.slug,
   }));

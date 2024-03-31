@@ -24,17 +24,21 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { BsFillSendFill, BsLinkedin, BsPerson } from "react-icons/bs";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import useIsHovered from "../hooks/useIsHovered";
 
 export default function ContactForm() {
   const { hasCopied, onCopy } = useClipboard("catherinemanikham@gmail.com");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const toast = useToast();
+
+  const ref = useRef<HTMLInputElement>(null);
+  const isHovered = useIsHovered(ref);
 
   const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true);
@@ -153,24 +157,24 @@ export default function ContactForm() {
 
                     <Input
                       borderColor='green.500'
-                      color='green.500'
+                      ref={ref}
                       mt='12px'
                       variant='outline'
                       w='fit-content'
                       leftIcon={
                         isSubmitting ? (
-                          <Spinner color='green.500' size='sm' />
+                          <Spinner color={"white"} size='sm' />
                         ) : (
                           <BsFillSendFill size={16} />
                         )
                       }
-                      isDisabled={isSubmitting}
                       _hover={{ bg: "green.500", color: "#fff" }}
                       as={Button}
+                      pointerEvents={isSubmitting ? "none" : "auto"}
                       type='submit'
                       value='Send'
-                      bg='transparent'
-                      isLoading={isSubmitting}
+                      bg={isSubmitting ? "green.500" : "transparent"}
+                      color={isSubmitting ? "white" : "green.500"}
                       size={"sm"}
                     >
                       Envoyer le message{" "}

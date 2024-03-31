@@ -24,21 +24,17 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useState } from "react";
 import { BsFillSendFill, BsLinkedin, BsPerson } from "react-icons/bs";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
-import useIsHovered from "../hooks/useIsHovered";
 
 export default function ContactForm() {
   const { hasCopied, onCopy } = useClipboard("catherinemanikham@gmail.com");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const toast = useToast();
-
-  const ref = useRef<HTMLInputElement>(null);
-  const isHovered = useIsHovered(ref);
 
   const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true);

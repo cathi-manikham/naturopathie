@@ -153,7 +153,6 @@ export default function ContactForm() {
 
                     <Input
                       borderColor='green.500'
-                      ref={ref}
                       mt='12px'
                       variant='outline'
                       w='fit-content'

@@ -17,7 +17,7 @@ export const Testimonials = () => {
     pauseOnHover: true,
   };
   return (
-    <Container py={{ base: 12, md: 28 }} maxW='7xl'>
+    <Container py={{ base: 12, md: 24 }} maxW='7xl'>
       <Heading
         lineHeight={1.1}
         fontWeight={600}

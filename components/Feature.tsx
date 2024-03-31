@@ -41,7 +41,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function SimpleThreeColumns() {
   return (
-    <Container py={{ base: 12, md: 20 }} maxW='7xl'>
+    <Container py={{ base: 12, md: 24 }} maxW='7xl'>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={

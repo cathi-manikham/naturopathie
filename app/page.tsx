@@ -1,6 +1,7 @@
 import { Metadata } from "next/types";
 import { Biography } from "../components/Biography";
 import Feature from "../components/Feature";
+import Formation from "../components/Formation";
 import Hero from "../components/Hero";
 import { Testimonials } from "../components/Testimonials";
 import styles from "./Layout.module.css";
@@ -30,6 +31,7 @@ export default function Home() {
       <Hero />
       <Feature />
       <Biography />
+      <Formation />
       <Testimonials />
     </div>
   );

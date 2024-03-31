@@ -8,12 +8,14 @@ import {
   FormControl,
   FormLabel,
   Heading,
+  HStack,
   IconButton,
   Input,
   InputGroup,
   InputLeftElement,
   Spinner,
   Stack,
+  Text,
   Textarea,
   Tooltip,
   useClipboard,
@@ -25,6 +27,7 @@ import emailjs from "@emailjs/browser";
 import { FormEvent, useState } from "react";
 import { BsFillSendFill, BsLinkedin, BsPerson } from "react-icons/bs";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 export default function ContactForm() {
@@ -255,6 +258,15 @@ export default function ContactForm() {
                     />
                   </Box>
                 </Stack>
+                <HStack
+                  fontWeight='bold'
+                  mt={4}
+                  justify='center'
+                  align='center'
+                >
+                  <FaPhoneFlip size={14} color='black' />
+                  <Text> 07 69 74 28 88</Text>
+                </HStack>
               </Box>
             </Stack>
           </VStack>

@@ -18,7 +18,7 @@ export const Biography = () => {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base: 12, md: 24 }}
         direction={{ base: "column", xl: "row" }}
         wrap='wrap'
       >

@@ -1,4 +1,5 @@
 import { Metadata } from "next/types";
+import { CancellationText } from "../../components/CancellationText";
 import ContactForm from "../../components/ContactForm";
 import PricingList from "../../components/PricingList";
 import { FAQ } from "../../components/faq";
@@ -23,6 +24,7 @@ export default function Page() {
   return (
     <div className={styles.layout}>
       <PricingList />
+      <CancellationText />
       <FAQ />
       <ContactForm />
     </div>

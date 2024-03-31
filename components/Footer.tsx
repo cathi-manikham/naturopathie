@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaPhoneFlip } from "react-icons/fa6";
 
 const Logo = (props: any) => {
   return (
@@ -85,10 +86,6 @@ export default function Footer() {
       >
         <HStack>
           <Image src='/logo.png' alt='logo' boxSize='120px' />
-          {/* <Heading as='h5' size='lg'>
-            {" "}
-            Catherine Manikham
-          </Heading> */}
         </HStack>
         <Stack
           justify='center'
@@ -99,6 +96,9 @@ export default function Footer() {
         >
           <Box as={Link} href={"/"}>
             Home
+          </Box>
+          <Box as={Link} href={"/naturopathie"}>
+            Naturopathie
           </Box>
           <Box as={Link} href={"/blog"}>
             Blog
@@ -133,6 +133,10 @@ export default function Footer() {
         >
           <Text>© 2024 Catherine Manikham. Tous droits réservés</Text>
           <Stack direction={"row"} spacing={6}>
+            <HStack fontWeight='bold' justify='center' align='center'>
+              <FaPhoneFlip size={14} color='black' />
+              <Text> 07 69 74 28 88</Text>
+            </HStack>
             <SocialButton
               label={"Linkedin"}
               href={"https://www.linkedin.com/in/catherine-manikham-569420204/"}

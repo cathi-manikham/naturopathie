@@ -10,6 +10,7 @@ import {
   ListItem,
   Stack,
   Text,
+  VStack,
 } from "@chakra-ui/react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCheckCircle } from "react-icons/fa";
@@ -17,15 +18,15 @@ import { pricing } from "../data/pricing";
 
 interface PackageTierProps {
   title: string;
+  description: string;
   features: Array<{ id: number; desc: string; isValid: boolean }>;
   typePlan: string;
-  checked?: boolean;
 }
 const PackageTier = ({
   title,
+  description,
   features,
   typePlan,
-  checked = false,
 }: PackageTierProps) => {
   return (
     <Stack
@@ -41,9 +42,19 @@ const PackageTier = ({
       }}
       alignItems={{ md: "center" }}
     >
-      <Heading w={"314px"} size={"md"}>
-        {title}
-      </Heading>
+      <VStack
+        justify={{ base: "flex-start", md: "center" }}
+        alignItems={{ md: "center" }}
+        w='fit-content'
+        gap='6px'
+      >
+        <Heading w={{ base: "100%", md: "314px" }} size={"md"}>
+          {title}
+        </Heading>
+        <Text fontSize='sm' w={{ base: "100%", md: "314px" }} color='gray.400'>
+          {description}
+        </Text>
+      </VStack>
       <List spacing={3} textAlign='start'>
         {features.map((desc, id) => (
           <ListItem key={desc.id}>
@@ -75,7 +86,7 @@ const PackageTier = ({
 };
 const PricingList = () => {
   return (
-    <Box py={{ base: 10, md: 20 }} px={5} width='full'>
+    <Box pt={{ base: 10, md: 20 }} pb={2} px={5} width='full'>
       <Stack spacing={4} width={"100%"} direction={"column"}>
         <Stack
           p={5}
@@ -120,6 +131,7 @@ const PricingList = () => {
             title={tier.title}
             typePlan={tier.price}
             features={tier.features}
+            description={tier.description}
           />
         ))}
       </Stack>

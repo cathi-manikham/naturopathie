@@ -31,7 +31,6 @@ export default function TestimonialsCard({
       align={"center"}
       justify='center'
       direction={"column"}
-      // bg={useColorModeValue("green.50", "green.100")}
       borderRadius='8px'
     >
       <Heading fontSize={{ base: "2xl", md: "4xl" }} as={"h3"}>

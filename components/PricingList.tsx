@@ -15,6 +15,7 @@ import {
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCheckCircle } from "react-icons/fa";
 import { pricing } from "../data/pricing";
+import { Colors } from "@/theme/colors";
 
 interface PackageTierProps {
   title: string;
@@ -61,7 +62,7 @@ const PackageTier = ({
             <ListIcon
               size={"lg"}
               as={desc.isValid ? FaCheckCircle : AiFillCloseCircle}
-              color={desc.isValid ? "green.500" : "red.500"}
+              color={desc.isValid ? Colors.darkPink500 : "red.500"}
             />
             {desc.desc}
           </ListItem>
@@ -74,9 +75,9 @@ const PackageTier = ({
           target='_blank'
           href={"https://calendly.com/catherinemanikham/30min"}
           size='md'
-          color={"green.500"}
-          bgColor={"green.100"}
-          _hover={{ bgColor: "green.50" }}
+          color={Colors.darkPink500}
+          bgColor={Colors.lightPink100}
+          _hover={{ bgColor: Colors.lightPink50 }}
         >
           Prendre rendez-vous
         </Button>
@@ -109,7 +110,7 @@ const PricingList = () => {
           >
             <Heading size={"lg"}>
               Choisissez ce qui vous{" "}
-              <Text color='green.400'>convient le mieux</Text>
+              <Text color={Colors.darkPink400}>convient le mieux</Text>
             </Heading>
           </Stack>
           <Stack

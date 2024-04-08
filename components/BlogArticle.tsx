@@ -16,6 +16,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { NotionArticle } from "../types/notion";
 import { BlogArticleMeta } from "./BlogArticleMeta";
+import { Colors } from "@/theme/colors";
 
 interface Props {
   data: NotionArticle;
@@ -65,7 +66,7 @@ export const BlogArticle = ({ data, markDown }: Props) => {
       {data.tags.map((tag) => (
         <HStack my='12px' align='center' wrap='wrap' key={tag}>
           <Text fontWeight={700}>Tags:</Text>
-          <Tag colorScheme='green'>{tag}</Tag>
+          <Tag colorScheme={Colors.lightPink100}>{tag}</Tag>
         </HStack>
       ))}
     </Container>

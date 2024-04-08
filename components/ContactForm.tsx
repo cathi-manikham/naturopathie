@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Box,
   Button,
@@ -152,7 +153,7 @@ export default function ContactForm() {
                     </FormControl>
 
                     <Input
-                      borderColor='green.500'
+                      borderColor={Colors.darkPink500}
                       mt='12px'
                       variant='outline'
                       w='fit-content'
@@ -163,13 +164,13 @@ export default function ContactForm() {
                           <BsFillSendFill size={16} />
                         )
                       }
-                      _hover={{ bg: "green.500", color: "#fff" }}
+                      _hover={{ bg: Colors.darkPink500, color: "#fff" }}
                       as={Button}
                       pointerEvents={isSubmitting ? "none" : "auto"}
                       type='submit'
                       value='Send'
-                      bg={isSubmitting ? "green.500" : "transparent"}
-                      color={isSubmitting ? "white" : "green.500"}
+                      bg={isSubmitting ? Colors.darkPink500 : "transparent"}
+                      color={isSubmitting ? "white" : Colors.darkPink500}
                       size={"sm"}
                     >
                       Envoyer le message{" "}
@@ -198,7 +199,7 @@ export default function ContactForm() {
                       fontSize='3xl'
                       icon={<MdEmail />}
                       _hover={{
-                        bg: "green.100",
+                        bg: Colors.lightPink100,
                       }}
                       onClick={onCopy}
                       isRound
@@ -217,7 +218,7 @@ export default function ContactForm() {
                       fontSize='3xl'
                       icon={<FaFacebook />}
                       _hover={{
-                        bg: "green.100",
+                        bg: Colors.lightPink100,
                       }}
                       isRound
                     />
@@ -234,7 +235,7 @@ export default function ContactForm() {
                       size='lg'
                       icon={<FaInstagram size='28px' />}
                       _hover={{
-                        bg: "green.100",
+                        bg: "Colors.lightPink100",
                       }}
                       isRound
                     />
@@ -251,7 +252,7 @@ export default function ContactForm() {
                       size='lg'
                       icon={<BsLinkedin size='28px' />}
                       _hover={{
-                        bg: "green.100",
+                        bg: "Colors.lightPink100",
                       }}
                       isRound
                     />

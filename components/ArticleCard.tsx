@@ -16,6 +16,7 @@ import useIsHovered from "../hooks/useIsHovered";
 import { NotionArticle } from "../types/notion";
 import { ArticleAuthor } from "./ArticleAuthor";
 import { ScalingImage } from "./ScalingImage";
+import { Colors } from "@/theme/colors";
 
 interface Props {
   data: NotionArticle;
@@ -43,7 +44,7 @@ export const ArticleCard = ({ data }: Props) => {
           justify='flex-start'
         >
           <HStack wrap='wrap'>
-            <Tag size='sm' colorScheme='green'>
+            <Tag size='sm' colorScheme={Colors.darkPink}>
               {data.tags[0]}
             </Tag>
           </HStack>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Box,
   Button,
@@ -76,11 +77,11 @@ export default function Header() {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"green.400"}
+            bg={Colors.darkPink400}
             href={"https://calendly.com/catherinemanikham/30min"}
             target='_blank'
             _hover={{
-              bg: "green.300",
+              bg: Colors.darkPink300,
             }}
             size={{ base: "xs", md: "sm" }}
           >

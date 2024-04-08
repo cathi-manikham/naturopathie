@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import { Link } from "@chakra-ui/next-js";
 import {
   Box,
@@ -73,7 +74,7 @@ export default function Footer() {
   return (
     <Box
       mt='36px'
-      bg={"green.50"}
+      bg={Colors.lightPink50}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container

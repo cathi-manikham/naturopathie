@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Box,
   BoxProps,
@@ -32,7 +33,7 @@ export const Biography = () => {
             lineHeight={1.1}
             fontWeight={600}
             fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-            color={"green.400"}
+            color={Colors.darkPink400}
           >
             Qui suis-je?
           </Heading>

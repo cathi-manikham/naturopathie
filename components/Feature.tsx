@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Container,
   Flex,
@@ -28,7 +29,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         justify={"center"}
         color={"white"}
         rounded={"full"}
-        bg={"green.50"}
+        bg={Colors.lightPink50}
         mb={1}
       >
         {icon}
@@ -45,7 +46,7 @@ export default function SimpleThreeColumns() {
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={
-            <Icon color='green.300' as={RiMentalHealthFill} w={10} h={10} />
+            <Icon color={Colors.darkPink300} as={RiMentalHealthFill} w={10} h={10} />
           }
           title={"Approche holistique"}
           text={
@@ -53,14 +54,14 @@ export default function SimpleThreeColumns() {
           }
         />
         <Feature
-          icon={<Icon color='green.300' as={MdEmojiNature} w={10} h={10} />}
+          icon={<Icon color={Colors.darkPink300} as={MdEmojiNature} w={10} h={10} />}
           title={"Médecines naturelles"}
           text={
             "Les naturopathes utilisent des remèdes naturels pour soutenir la guérison du corps..."
           }
         />
         <Feature
-          icon={<Icon color='green.300' as={MdNaturePeople} w={10} h={10} />}
+          icon={<Icon color={Colors.darkPink300} as={MdNaturePeople} w={10} h={10} />}
           title={"Soins individualisés"}
           text={
             "Les traitements sont personnalisés selon l'individu, en considérant son histoire médicale, génétique et son mode de vie...."

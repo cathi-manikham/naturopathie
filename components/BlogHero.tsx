@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { NotionArticle } from "../types/notion";
 import { ArticleAuthor } from "./ArticleAuthor";
+import { Colors } from "@/theme/colors";
 
 interface Props {
   data: NotionArticle;
@@ -22,8 +23,8 @@ interface Props {
 const BlogHero = ({ data }: Props) => {
   const descriptionColor = useColorModeValue("gray.700", "gray.200");
   const gradientColor = useColorModeValue(
-    "radial(green.600 1px, transparent 1px)",
-    "radial(green.500 1px, transparent 1px)"
+    `radial(${Colors.darkPink600} 1px, transparent 1px)`,
+    `radial(${Colors.darkPink500} 1px, transparent 1px)`
   );
   if (!data || typeof data === "undefined") {
     return null;
@@ -78,7 +79,7 @@ const BlogHero = ({ data }: Props) => {
           marginTop={{ base: "3", sm: "0" }}
         >
           <HStack>
-            <Tag colorScheme='green'>{data.tags[0]}</Tag>
+            <Tag colorScheme={Colors.lightPink100}>{data.tags[0]}</Tag>
           </HStack>
           <Heading fontSize={{ base: "3xl", lg: "4xl" }} marginTop='1'>
             <Text textDecoration='none' _hover={{ textDecoration: "none" }}>

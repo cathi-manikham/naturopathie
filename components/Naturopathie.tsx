@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Container,
   Flex,
@@ -29,7 +30,7 @@ export const Naturopathie = () => {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: "xl", sm: "2xl", lg: "4xl" }}
-          color={"green.400"}
+          color={Colors.darkPink400}
         >
           Qu’est ce que la Naturopathie?
         </Heading>
@@ -62,7 +63,7 @@ export const Naturopathie = () => {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: "xl", sm: "2xl", lg: "4xl" }}
-          color={"green.400"}
+          color={Colors.darkPink400}
           mt='12px'
         >
           En quoi consiste la pratique?
@@ -80,7 +81,7 @@ export const Naturopathie = () => {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: "xl", sm: "2xl", lg: "4xl" }}
-          color={"green.400"}
+          color={Colors.darkPink400}
           mt='12px'
         >
           Quel est le rôle du naturopathe?
@@ -131,7 +132,7 @@ export const Naturopathie = () => {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: "xl", sm: "2xl", lg: "4xl" }}
-          color={"green.400"}
+          color={Colors.darkPink400}
           mt='12px'
         >
           Comment se déroule une consultation avec un naturopathe?{" "}
@@ -156,7 +157,7 @@ export const Naturopathie = () => {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: "xl", sm: "2xl", lg: "4xl" }}
-          color={"green.400"}
+          color={Colors.darkPink400}
           mt='12px'
         >
           Pourquoi consulter un naturopathe?{" "}
@@ -183,7 +184,7 @@ export const Naturopathie = () => {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: "xl", sm: "2xl", lg: "4xl" }}
-          color={"green.400"}
+          color={Colors.darkPink400}
           mt='12px'
         >
           Et après la première séance?{" "}

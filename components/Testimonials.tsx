@@ -3,6 +3,7 @@ import { Container, Heading } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { testimonials } from "../data/testimonials";
 import TestimonialsCard from "./TestimonialsCard";
+import { Colors } from "@/theme/colors";
 
 export const Testimonials = () => {
   var settings = {
@@ -22,7 +23,7 @@ export const Testimonials = () => {
         lineHeight={1.1}
         fontWeight={600}
         fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-        color={"green.400"}
+        color={Colors.darkPink400}
         mb='32px'
       >
         Testimonials

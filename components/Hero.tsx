@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Box,
   Button,
@@ -39,14 +40,14 @@ export default function Hero() {
                 position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: "green.100",
+                bg: Colors.lightPink100,
                 zIndex: -1,
               }}
             >
               Embarquez pour un voyage de guérison naturelle avec{" "}
             </Text>
             <br />
-            <Text as={"span"} color={"green.300"}>
+            <Text as={"span"} color={Colors.darkPink300}>
               Catherine Manikham
             </Text>
           </Heading>
@@ -66,8 +67,8 @@ export default function Hero() {
               fontWeight={"normal"}
               px={6}
               colorScheme={"red"}
-              bg={"green.400"}
-              _hover={{ bg: "green.500" }}
+              bg={Colors.darkPink400}
+              _hover={{ bg: Colors.darkPink500 }}
               target='_blank'
               href={"https://calendly.com/catherinemanikham/30min"}
             >
@@ -89,7 +90,7 @@ export default function Hero() {
             top={"-20%"}
             left={0}
             zIndex={-1}
-            color={useColorModeValue("green.50", "green.400")}
+            color={useColorModeValue(Colors.lightPink50, Colors.darkPink400)}
           />
           <Box
             position={"relative"}

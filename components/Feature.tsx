@@ -1,14 +1,7 @@
 "use client";
 
 import { Colors } from "@/theme/colors";
-import {
-  Container,
-  Flex,
-  Icon,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Container, Flex, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { MdEmojiNature, MdNaturePeople } from "react-icons/md";
 import { RiMentalHealthFill } from "react-icons/ri";
@@ -42,29 +35,27 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function SimpleThreeColumns() {
   return (
-    <Container py={{ base: 12, md: 24 }} maxW='7xl'>
+    <Container py={{ base: 12, md: 24 }} maxW="7xl">
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
-          icon={
-            <Icon color={Colors.darkPink300} as={RiMentalHealthFill} w={10} h={10} />
-          }
-          title={"Approche holistique"}
+          icon={<Icon color={Colors.darkPink300} as={MdEmojiNature} w={10} h={10} />}
+          title={"Médecine traditionnelle occidentale"}
           text={
-            "La naturopathie prend en compte tous les aspects de la santé : physique, mentale et émotionnelle..."
+            "La prévention est le leitmotiv de la naturopathie. Le retour à une hygiène de vie simple est garant d’une bonne santé. Le naturopathe insère dans la cure proposée des moyens naturels pour soutenir l’organisme."
           }
         />
         <Feature
-          icon={<Icon color={Colors.darkPink300} as={MdEmojiNature} w={10} h={10} />}
-          title={"Médecines naturelles"}
+          icon={<Icon color={Colors.darkPink300} as={RiMentalHealthFill} w={10} h={10} />}
+          title={"Approche holistique"}
           text={
-            "Les naturopathes utilisent des remèdes naturels pour soutenir la guérison du corps..."
+            "La naturopathie prend en compte tous les aspects de la santé : physique, mentale, émotionnelle, et spirituelle. Elle considère l’individu comme un tout, où chacune de ces quatre dimensions ne peut être abordée séparément les unes des autres."
           }
         />
         <Feature
           icon={<Icon color={Colors.darkPink300} as={MdNaturePeople} w={10} h={10} />}
-          title={"Soins individualisés"}
+          title={"Individualisation"}
           text={
-            "Les traitements sont personnalisés selon l'individu, en considérant son histoire médicale, génétique et son mode de vie...."
+            "Les cures sont personnalisées selon l’individu, en considérant son histoire, ses antécédents, et son mode de vie."
           }
         />
       </SimpleGrid>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 export const CancellationText = () => {
@@ -13,13 +14,14 @@ export const CancellationText = () => {
       pb={{ base: 10, md: 20 }}
       width='full'
       gap={2}
+			paddingTop={20}
     >
       <Heading
         as='h2'
         fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
         lineHeight={1.2}
         fontWeight='bold'
-        color='blackAlpha.800'
+        color={Colors.darkPink400}
       >
         REMBOURSEMENTS
       </Heading>

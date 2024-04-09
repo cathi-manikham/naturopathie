@@ -14,7 +14,7 @@ export const Testimonials = () => {
     slidesToScroll: 1,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
   };
   return (
@@ -26,7 +26,7 @@ export const Testimonials = () => {
         color={Colors.darkPink400}
         mb='32px'
       >
-        Testimonials
+        Témoignages
       </Heading>
       <Slider {...settings}>
         {testimonials.map((testimonial) => (
@@ -34,7 +34,6 @@ export const Testimonials = () => {
             key={testimonial.id}
             review={testimonial.review}
             name={testimonial.name}
-            date={testimonial.date}
             heading={testimonial.heading}
           />
         ))}

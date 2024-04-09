@@ -6,18 +6,14 @@ import styles from "../Layout.module.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://naturopathie.vercel.app/naturopathie"),
   title: "Naturopathie - Catherine Manikham | Naturopathe",
-  description: ` Le naturopathe utilise des thérapies naturelles pour promouvoir la
-      santé et le bien-être, en identifiant et en traitant les causes
-      profondes des maladies.`,
+  description: `La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie plus simple et proche de la nature, dans le but de garder la santé et de vivre mieux.`,
   keywords:
     "naturopathie, Approche holistique, Médecines naturelles, Soins individualisés,Catherine Manikham, Catherine, Manikham, bien-être, guérison naturelle",
   openGraph: {
     title: "Naturopathie - Catherine Manikham | Naturopathe",
     url: "https://naturopathie.vercel.app/Naturopathie",
     type: "website",
-    description: `Le naturopathe utilise des thérapies naturelles pour promouvoir la
-        santé et le bien-être, en identifiant et en traitant les causes
-        profondes des maladies.`,
+    description: `La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie plus simple et proche de la nature, dans le but de garder la santé et de vivre mieux.`,
     images: "/home.png",
   },
 };

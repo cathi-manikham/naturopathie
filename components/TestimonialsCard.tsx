@@ -12,14 +12,12 @@ import {
 interface Props {
   review: string;
   name: string;
-  date: string;
   heading: string;
 }
 
 export default function TestimonialsCard({
   review,
   name,
-  date,
   heading,
 }: Props) {
   return (
@@ -47,9 +45,6 @@ export default function TestimonialsCard({
         <Avatar name={name} mb={2} />
 
         <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={"sm"} color={useColorModeValue("gray.400", "gray.400")}>
-          {date}
-        </Text>
       </Box>
     </Stack>
   );

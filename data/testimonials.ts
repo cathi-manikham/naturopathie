@@ -2,7 +2,6 @@ export const testimonials = [
   {
     id: 1,
     name: "Arlette",
-    date: "janvier 2022",
     heading: "J’ai tout à fait confiance!",
     review: `J’ai beaucoup aimé l’écoute bienveillante de Mme Manikham. Les conseils formulés sont très détaillés et couvrent de nombreux domaines: alimentation, sommeil, transpiration… . Les bons choixen matière d’alimentation ou plus généralement d’hygiène sont préférés aux compléments alimentaires.
 
@@ -13,7 +12,6 @@ export const testimonials = [
   {
     id: 2,
     name: "Nathalie",
-    date: "septembre 2022",
     heading: "Merci pour les précieux conseils!",
     review: `J’ai remarqué depuis quelques mois que j’avais souvent mal au ventre (ventre ballonné, troubles digestifs) dès que je mangeais.
 
@@ -26,7 +24,6 @@ export const testimonials = [
   {
     id: 3,
     name: "Fabrice",
-    date: "décembre 2022",
     heading: "Je me sens beaucoup mieux",
     review: `J’ai eu une session de naturopathie en janvier 2022. Je souffrais de fatigue chronique. Les médecins ne trouvaient rien malgré les différents examens.
 
@@ -37,7 +34,6 @@ export const testimonials = [
   {
     id: 4,
     name: "Florianne",
-    date: "novembre 2022",
     heading: "Une séance instructive",
     review: `
     Merci à Catherine pour son écoute et ses conseils. Catherine m’a aidée à comprendre ce que je devais changer dans mon hygiène de vie grâce à des explications simples et claires.
@@ -46,11 +42,17 @@ export const testimonials = [
 
     J’applique désormais ses autres conseils et une véritable prise de conscience s’est opérée!`,
   },
-
   {
     id: 5,
+    name: "Bac-sy",
+    heading: "Merci pour ces superbes conseils.",
+    review:
+      "Catherine est une naturopathe très à l'écoute qui sait s'adapter à sa clientèle. Elle cible rapidement vos besoins pour vous donner les meilleurs conseils. Personnellement, j'ai beaucoup appris grâce à ses connaissances et j'ai aussi amélioré mon hygiène de vie de manière très agréable à l'aide de son suivi bienveillant mais surtout très efficace. Je recommande également ses massages relaxants qui procurent un regain d'énergie et une détente parfaite pour évacuer le stress.",
+  },
+
+  {
+    id: 6,
     name: "Flaubert",
-    date: "août 2022",
     heading: "Vivement la deuxième séance!",
     review: `Première séance passée dans la bonne humeur, échange très intéressant, des questions pertinentes.
     Un mois après avoir appliqué les conseils, je sens une réelle différence en terme de bien-être physique et mental.`,

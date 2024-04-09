@@ -33,7 +33,7 @@ export default function Page() {
       <div className={styles.layout}>
         <PricingList />
         <CancellationText />
-        <FAQ />
+        {/* <FAQ /> */}
         <ContactForm />
       </div>
     </Suspense>

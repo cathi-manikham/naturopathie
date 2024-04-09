@@ -70,7 +70,7 @@ export default function Formation() {
           href={"/formation/2.svg"}
         />
         <Card
-          description={["Depuis novembre 2021", "Membre de l’OMNES"]}
+          description={["Membre de l’OMNES"]}
           icon={<Icon as={FcCollaboration} w={10} h={10} />}
           heading={"Depuis novembre 2021"}
           href={"/formation/4.png"}

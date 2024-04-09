@@ -50,7 +50,7 @@ export const pricing = [
       {
         id: 2,
         desc: "Consultation en visioconférence",
-        isValid: true,
+        isValid: false,
       },
       {
         id: 3,
@@ -70,7 +70,7 @@ export const pricing = [
       {
         id: 2,
         desc: "Consultation en visioconférence",
-        isValid: true,
+        isValid: false,
       },
       {
         id: 3,

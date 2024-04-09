@@ -42,7 +42,7 @@ export const ArticleCard = ({ data }: Props) => {
           align='center'
           justify='flex-start'
         >
-          {data.tags?.length && (
+          {data.tags?.length !== 0 && (
             <HStack wrap='wrap'>
               <Tag size='sm' colorScheme={"pink"}>
                 {data.tags[0]}

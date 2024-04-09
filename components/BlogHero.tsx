@@ -78,7 +78,7 @@ const BlogHero = ({ data }: Props) => {
           justifyContent='center'
           marginTop={{ base: "3", sm: "0" }}
         >
-          {data.tags?.length && (
+          {data.tags?.length !== 0 && (
             <HStack>
               <Tag colorScheme={"pink"}>{data.tags[0]}</Tag>
             </HStack>

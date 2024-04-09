@@ -62,7 +62,7 @@ export const BlogArticle = ({ data, markDown }: Props) => {
       >
         {markDown}
       </Box>
-      {data.tags?.length &&
+      {data.tags?.length !== 0 &&
         data.tags.map((tag) => (
           <HStack my='12px' align='center' wrap='wrap' key={tag}>
             <Text fontWeight={700}>Tags:</Text>

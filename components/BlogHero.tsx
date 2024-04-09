@@ -1,5 +1,6 @@
 "use client";
 
+import { Colors } from "@/theme/colors";
 import {
   Box,
   Image as ChakraImage,
@@ -14,7 +15,6 @@ import {
 import Link from "next/link";
 import { NotionArticle } from "../types/notion";
 import { ArticleAuthor } from "./ArticleAuthor";
-import { Colors } from "@/theme/colors";
 
 interface Props {
   data: NotionArticle;
@@ -79,7 +79,7 @@ const BlogHero = ({ data }: Props) => {
           marginTop={{ base: "3", sm: "0" }}
         >
           <HStack>
-            <Tag colorScheme={Colors.lightPink100}>{data.tags[0]}</Tag>
+            <Tag colorScheme={"pink"}>{data.tags[0]}</Tag>
           </HStack>
           <Heading fontSize={{ base: "3xl", lg: "4xl" }} marginTop='1'>
             <Text textDecoration='none' _hover={{ textDecoration: "none" }}>

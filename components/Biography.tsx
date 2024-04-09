@@ -127,7 +127,7 @@ const Blob = (props: BoxProps) => {
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
       margin={"20px"}
-      boxShadow={"0 5px 5px 5px #F0FFF4"}
+      boxShadow={"0 5px 5px 5px #FAD7D650"}
       animation={`${animate} 5s ease-in-out infinite`}
       transition={"all 1s ease-in-out"}
     ></Box>

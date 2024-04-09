@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import { css } from "@emotion/react";
 import { useRef } from "react";
 import { NotionArticle } from "../types/notion";
 import { RecentArticleCard } from "./RecentArticleCard";
@@ -26,6 +27,14 @@ export const RecentArticles = ({ data }: Props) => {
       borderRadius='4px'
       bgColor={"gray.50"}
       ref={parentRef}
+      css={css`
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      `}
     >
       <Heading
         fontWeight='bold'
@@ -43,6 +52,14 @@ export const RecentArticles = ({ data }: Props) => {
         flexDirection='row'
         justifyContent='start'
         gap='30px'
+        css={css`
+          scroll-behavior: smooth;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        `}
       >
         {data.map((article) => (
           <RecentArticleCard key={article.id} data={article} />

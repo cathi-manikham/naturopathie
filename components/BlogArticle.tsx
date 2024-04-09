@@ -62,12 +62,13 @@ export const BlogArticle = ({ data, markDown }: Props) => {
       >
         {markDown}
       </Box>
-      {data.tags.map((tag) => (
-        <HStack my='12px' align='center' wrap='wrap' key={tag}>
-          <Text fontWeight={700}>Tags:</Text>
-          <Tag colorScheme={"pink"}>{tag}</Tag>
-        </HStack>
-      ))}
+      {data.tags?.length &&
+        data.tags.map((tag) => (
+          <HStack my='12px' align='center' wrap='wrap' key={tag}>
+            <Text fontWeight={700}>Tags:</Text>
+            <Tag colorScheme={"pink"}>{tag}</Tag>
+          </HStack>
+        ))}
     </Container>
   );
 };

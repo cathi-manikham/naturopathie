@@ -78,9 +78,11 @@ const BlogHero = ({ data }: Props) => {
           justifyContent='center'
           marginTop={{ base: "3", sm: "0" }}
         >
-          <HStack>
-            <Tag colorScheme={"pink"}>{data.tags[0]}</Tag>
-          </HStack>
+          {data.tags?.length && (
+            <HStack>
+              <Tag colorScheme={"pink"}>{data.tags[0]}</Tag>
+            </HStack>
+          )}
           <Heading fontSize={{ base: "3xl", lg: "4xl" }} marginTop='1'>
             <Text textDecoration='none' _hover={{ textDecoration: "none" }}>
               {data.title}

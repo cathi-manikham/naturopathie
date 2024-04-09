@@ -42,11 +42,13 @@ export const ArticleCard = ({ data }: Props) => {
           align='center'
           justify='flex-start'
         >
-          <HStack wrap='wrap'>
-            <Tag size='sm' colorScheme={"pink"}>
-              {data.tags[0]}
-            </Tag>
-          </HStack>
+          {data.tags?.length && (
+            <HStack wrap='wrap'>
+              <Tag size='sm' colorScheme={"pink"}>
+                {data.tags[0]}
+              </Tag>
+            </HStack>
+          )}
           <Circle size='4px' bg='gray.200'></Circle>
           <Text fontSize='xs' color='gray.500'>
             {data.date}

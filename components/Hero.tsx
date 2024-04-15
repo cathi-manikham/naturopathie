@@ -62,7 +62,7 @@ export default function Hero() {
               bg={Colors.darkPink400}
               _hover={{ bg: Colors.darkPink500 }}
               target="_blank"
-              href={"https://calendly.com/catherinemanikham/30min"}
+              href={"https://calendly.com/cath-manikham/consultation"}
             >
               Prendre rendez-vous{" "}
             </Button>

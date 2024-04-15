@@ -78,7 +78,7 @@ export default function Header() {
             fontWeight={600}
             color={"white"}
             bg={Colors.darkPink400}
-            href={"https://calendly.com/catherinemanikham/30min"}
+            href={"https://calendly.com/cath-manikham/consultation"}
             target='_blank'
             _hover={{
               bg: Colors.darkPink300,

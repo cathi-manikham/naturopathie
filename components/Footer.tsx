@@ -110,7 +110,7 @@ export default function Footer() {
           <Box
             as={"a"}
             target='_blank'
-            href={"https://calendly.com/catherinemanikham/30min"}
+            href={"https://calendly.com/cath-manikham/consultation"}
             _hover={{ textDecoration: "underline" }}
           >
             Prendre rendez-vous

@@ -73,7 +73,7 @@ const PackageTier = ({
         <Button
           as={"a"}
           target='_blank'
-          href={"https://calendly.com/catherinemanikham/30min"}
+          href={"https://calendly.com/cath-manikham/consultation"}
           size='md'
           color={Colors.darkPink500}
           bgColor={Colors.lightPink100}

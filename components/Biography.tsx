@@ -31,6 +31,7 @@ export const Biography = () => {
               2017 est l’année qui a marqué le début de ma quête de sens. Après avoir pris une année sabbatique à
               voyager de l’autre côté du globe,
               <b>
+                {" "}
                 c’est loin de mes repères que j’ai réalisé que je voulais passer le reste de mes jours à faire quelque
                 chose qui me fasse vibrer.
               </b>
@@ -38,7 +39,7 @@ export const Biography = () => {
             <Text color={"gray.500"}>
               Jusqu’ici je n’avais jamais songé à transformer et combiner ma passion pour les lectures de santé
               naturelle et mon envie d’aider les autres, en une réalité dont je serai fière.
-              <b>La Naturopathie était devenue une évidence.</b>
+              <b> La Naturopathie était devenue une évidence.</b>
             </Text>
             <Text color={"gray.500"}>
               {" "}

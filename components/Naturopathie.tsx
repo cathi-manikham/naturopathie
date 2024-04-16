@@ -44,7 +44,7 @@ export const Naturopathie = () => {
         <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
           L’Organisation Mondiale de la Santé définit la Naturopathie comme « un
           ensemble de méthodes de soins visant à
-          <b>renforcer les défenses de l’organisme </b> par des moyens
+          <b> renforcer les défenses de l’organisme </b> par des moyens
           considérés comme naturels et biologiques ».
         </Text>
         <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
@@ -70,7 +70,7 @@ export const Naturopathie = () => {
         </Heading>
         <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
           En Naturopathie, on considère que <b> la norme est la santé</b>, et
-          que c’est <b>la force vitale </b> (ou énergie) qui<b>nous anime. </b>{" "}
+          que c’est <b>la force vitale </b> (ou énergie) qui <b>nous anime. </b>{" "}
           C’est elle, qui permet à notre organisme de se défendre et de guérir.
         </Text>
 
@@ -170,7 +170,7 @@ export const Naturopathie = () => {
           Il vous guidera pour<b> (re)trouver un équilibre</b> selon les
           améliorations que vous cherchez à atteindre. Les maux de votre
           quotidien s’atténueront voire disparaîtront, grâce à la{" "}
-          <b> réforme de vie</b>
+          <b> réforme de vie </b>
           qui vous sera proposée.
         </Text>
         <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>

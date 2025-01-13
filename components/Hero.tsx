@@ -46,6 +46,7 @@ export default function Hero() {
             <Text as={"span"} color={Colors.darkPink300}>
               Catherine Manikham
             </Text>
+						<h1 style={{ fontSize: '20px', paddingTop: '20px', color: Colors.darkPink300}}>Naturopathe à domicile:<br/> Châtenay-Malabry - Antony - Sceaux - Paris</h1>
           </Heading>
           <Text color={"gray.500"}>
             La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie

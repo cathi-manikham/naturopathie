@@ -81,7 +81,7 @@ export default function Formation() {
         </Heading>
       </Stack>
 
-      <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={4500} transitionDuration={600} >
+      <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={4500} transitionDuration={600} arrows={false}>
         <Card
           description={[
             "Formation à l’ISUPNAT",

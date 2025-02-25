@@ -19,11 +19,11 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 4,
+    items: 3,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -81,7 +81,7 @@ export default function Formation() {
         </Heading>
       </Stack>
 
-      <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={4500} transitionDuration={600} arrows={false}>
+      <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={4500} transitionDuration={600} arrows={true} centerMode={true}>
         <Card
           description={[
             "Formation à l’ISUPNAT",

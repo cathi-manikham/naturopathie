@@ -5,6 +5,9 @@ import { Box, Container, Flex, Heading, Icon, Image, Stack, Text } from "@chakra
 import { ReactElement } from "react";
 import { FcAssistant, FcCollaboration, FcDonate, FcManager } from "react-icons/fc";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 interface CardProps {
   heading: string;
   description: Array<string>;
@@ -12,10 +15,31 @@ interface CardProps {
   href: string;
 }
 
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 4,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 const Card = ({ heading, description, icon, href }: CardProps) => {
   return (
     <Box
       maxW={{ base: "full", md: "275px" }}
+      minH="340px"
       w={"fit-content"}
       borderWidth="1px"
       borderRadius="lg"
@@ -23,11 +47,13 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
       p={5}
     >
       <Stack align={"start"} spacing={2}>
-        <Flex w={"150px"} h={"100px"} align={"center"} justify={"center"}>
+        <Flex w={"150px"} h={"110px"} align={"center"} justify={"center"}>
           <Image w="100%" h="100%" objectFit="contain" src={href} alt={"formation_image"} />
         </Flex>
         <Box mt={2}>
-          <Heading size="md" maxWidth={200}>{heading}</Heading>
+          <Heading size="md" maxWidth={200}>
+            {heading}
+          </Heading>
           {description.map((e, i) => {
             return (
               <Text w="200px" mt={1} fontSize={"sm"} key={i}>
@@ -53,12 +79,9 @@ export default function Formation() {
         >
           Mes formations
         </Heading>
-        <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-          Depuis cette date, prestations récurrentes de massages au Centre.
-        </Text>
       </Stack>
 
-      <Flex w="100%" flexWrap="wrap" gridGap={6} justify={{ base: "flex-start", md: "center", lg: "space-around" }}>
+      <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={4500} transitionDuration={600} >
         <Card
           description={[
             "Formation à l’ISUPNAT",
@@ -70,9 +93,9 @@ export default function Formation() {
           href={"/formation/2.svg"}
         />
         <Card
-          description={["Membre de l’OMNES"]}
+          description={["Membre de l’OMNES depuis cette date"]}
           icon={<Icon as={FcCollaboration} w={10} h={10} />}
-          heading={"Depuis novembre 2021"}
+          heading={"Novembre 2021"}
           href={"/formation/4.png"}
         />
         <Card
@@ -90,7 +113,16 @@ export default function Formation() {
           heading={"Décembre 2021"}
           href={"/formation/1.jpg"}
         />
-      </Flex>
+        <Card
+          description={[
+            "Formation massages Drainage manuel de bien-être et Chi Nei Tsang",
+            "Obtention de la Certification Praticien en Massages bien-être",
+          ]}
+          icon={<Icon as={FcManager} w={10} h={10} />}
+          heading={"Février 2025"}
+          href={"/formation/5.webp"}
+        />
+      </Carousel>
     </Container>
   );
 }

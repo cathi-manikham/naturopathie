@@ -41,7 +41,7 @@ export const pricing = [
   },
   {
     id: 3,
-    title: "Massages “détox” (1h)",
+    title: "Massage “détox” (1h)",
     price: "90 Euros",
     description: "Le massage “détox” est un massage permettant de dénouer les tensions",
     features: [
@@ -55,7 +55,7 @@ export const pricing = [
   },
   {
     id: 4,
-    title: "Massages relaxant (1h)",
+    title: "Massage relaxant (1h)",
     price: "90 Euros",
     description:
       "Le massage relaxant est un massage enveloppant, qui vous permettra de déconnecter de votre quotidien.",

@@ -25,7 +25,7 @@ export default function Hero() {
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}>
+          <Heading as="h1" lineHeight={1.1} fontWeight={600} fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}>
             <Text
               as={"span"}
               position={"relative"}
@@ -46,7 +46,7 @@ export default function Hero() {
             <Text as={"span"} color={Colors.darkPink300}>
               Catherine Manikham
             </Text>
-						<h1 style={{ fontSize: '20px', paddingTop: '20px', color: Colors.darkPink300}}>Naturopathe à domicile:<br/> Châtenay-Malabry - Antony - Sceaux - Paris</h1>
+						<Text style={{ fontSize: '20px', paddingTop: '20px', color: Colors.darkPink300}}>Naturopathe à domicile:<br/> Châtenay-Malabry - Antony - Sceaux - Paris</Text>
           </Heading>
           <Text color={"gray.500"}>
             La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie

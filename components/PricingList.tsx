@@ -60,7 +60,6 @@ const PackageTier = ({
         {features.map((desc, id) => (
           <ListItem key={desc.id}>
             <ListIcon
-              size={"lg"}
               as={desc.isValid ? FaCheckCircle : AiFillCloseCircle}
               color={desc.isValid ? Colors.darkPink500 : "red.500"}
             />

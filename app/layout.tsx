@@ -14,9 +14,9 @@ export default function RootLayout({
     () => import('../components/crisp')
   )
   return (
-    <html lang='fr'>
+    <html lang='fr' data-theme="light" style={{ colorScheme: "light" }}>
 			<CrispWithNoSSR />
-      <body>
+      <body suppressHydrationWarning>
         <StyleProviders>
           <Header />
           {children}

@@ -175,7 +175,7 @@ export const Naturopathie = () => {
         </Text>
         <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
           Les conseils d’un naturopathe ne constituent{" "}
-          <p> pas une alternative à un traitement médical.</p>
+          <b> pas une alternative à un traitement médical.</b>
         </Text>
 
         {/*           Et après la première séance?

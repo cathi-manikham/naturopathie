@@ -4,6 +4,7 @@ import { Colors } from "@/theme/colors";
 import { Box, Container, Flex, Heading, Icon, Image, Stack, Text } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { FcAssistant, FcCollaboration, FcDonate, FcManager } from "react-icons/fc";
+import { useMediaQuery } from "react-responsive";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -26,11 +27,11 @@ const responsive = {
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 3,
+    breakpoint: { max: 1024, min: 500 },
+    items: 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 500, min: 0 },
     items: 1,
   },
 };
@@ -81,7 +82,15 @@ export default function Formation() {
         </Heading>
       </Stack>
 
-      <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={4500} transitionDuration={600} arrows={true} centerMode={true}>
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={4500}
+        transitionDuration={600}
+        arrows={true}
+        centerMode={useMediaQuery({ maxWidth: 700 }) ? false : true}
+      >
         <Card
           description={[
             "Formation à l’ISUPNAT",

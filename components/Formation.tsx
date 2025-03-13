@@ -124,7 +124,7 @@ export default function Formation() {
         />
         <Card
           description={[
-            "Formation massages Drainage manuel de bien-être et Chi Nei Tsang",
+            "Formation massages Drainage manuel bien-être et Chi Nei Tsang",
             "Obtention de la Certification Praticien en Massages bien-être",
           ]}
           icon={<Icon as={FcManager} w={10} h={10} />}

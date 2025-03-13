@@ -70,7 +70,7 @@ const PackageTier = ({
             rightIcon={<FaArrowRight size="12px" />}
             alignSelf="flex-start"
           >
-            Les massages
+            Informations sur les massages
           </Button>
         )}
       </VStack>

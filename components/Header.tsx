@@ -187,6 +187,10 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Naturopathie",
     href: "/naturopathie",
   },
+	{
+		label: "Massages",
+		href: "/massages"
+	},
   {
     label: "Blog",
     href: "/blog",

@@ -23,11 +23,11 @@ export const Biography = () => {
             Qui suis-je?
           </Heading>
           <VStack spacing={2} align="start">
-            <Text color={"gray.500"}>
+            <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
               Je travaille depuis une dizaine d’année dans le commerce international. Dès mes premiers pas dans le monde
               du travail, j’ai eu la sensation qu’il me manquait quelque chose pour me sentir totalement épanouie.
             </Text>
-            <Text color={"gray.500"}>
+            <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
               2017 est l’année qui a marqué le début de ma quête de sens. Après avoir pris une année sabbatique à
               voyager de l’autre côté du globe,
               <b>
@@ -36,26 +36,26 @@ export const Biography = () => {
                 chose qui me fasse vibrer.
               </b>
             </Text>
-            <Text color={"gray.500"}>
+            <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
               Jusqu’ici je n’avais jamais songé à transformer et combiner ma passion pour les lectures de santé
               naturelle et mon envie d’aider les autres, en une réalité dont je serai fière.
               <b> La Naturopathie était devenue une évidence.</b>
             </Text>
-            <Text color={"gray.500"}>
+            <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
               {" "}
               A mon retour en France, je me suis inscrite à <b>l’ISUPNAT</b> (Institut Supérieur de Naturopathie) membre
               de la <b>FENA</b> (Fédération Française de Naturopathie). Ma formation a duré un week-end sur deux pendant
               trois ans. Ce temps m’a permis de <b>faire l’expérience de ce que j’apprenais en cours </b>, et de mettre
               en place des outils dans mon mode de vie pour <b>prendre soin de moi et de ma santé.</b>
             </Text>
-            <Text color={"gray.500"}>
+            <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
               <b>Les divers petits maux qui ponctuaient mon quotidien ont disparu depuis</b>: éternuements et nez
               encombré tous les matins, maux de gorge récurrents, inconforts digestifs presque tous les jours,
               hypoglycémie réactionnelle dès que je ne mangeais pas à des heures précises, cystites, piqûres de
               moustiques en été, réactions cutanées dès exposition au soleil même avec une crème solaire indice 50,
               rhumes et/ou gastro systématiques en hiver, acné dans le dos, etc.
             </Text>
-            <Text color={"gray.500"}>
+            <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}	>
               Aujourd’hui{" "}
               <b>
                 titulaire d’un certificat de Naturopathe, mon objectif est de mettre à profit mes connaissances, pour

@@ -76,7 +76,7 @@ const PackageTier = ({
       </VStack>
       <List spacing={3} textAlign='start'>
         {features.map((desc, id) => (
-          <ListItem key={desc.id}>
+          <ListItem key={desc.id} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
             <ListIcon
               as={desc.isValid ? FaCheckCircle : AiFillCloseCircle}
               color={desc.isValid ? Colors.darkPink500 : "red.500"}
@@ -136,7 +136,7 @@ const PricingList = () => {
               md: "60%",
             }}
           >
-            <Text fontWeight='700' textAlign={"center"}>
+            <Text fontWeight='700' textAlign={"center"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
               Consultations à domicile dans un périmètre de 10 km autour de
               Châtenay-Malabry et à Paris.
             </Text>

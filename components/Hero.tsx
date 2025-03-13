@@ -48,7 +48,7 @@ export default function Hero() {
             </Text>
 						<Text style={{ fontSize: '20px', paddingTop: '20px', color: Colors.darkPink300}}>Naturopathe à domicile:<br/> Châtenay-Malabry - Antony - Sceaux - Paris</Text>
           </Heading>
-          <Text color={"gray.500"}>
+          <Text color={"gray.500"} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
             La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie
             plus simple et proche de la nature, dans le but de garder la santé et de vivre mieux.
           </Text>

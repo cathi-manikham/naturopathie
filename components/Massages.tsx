@@ -23,7 +23,7 @@ const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
 const textStyles = {
-  color: "gray.600",
+  color: "gray.500",
   fontSize: { base: "sm", md: "md", lg: "lg" },
 };
 
@@ -213,10 +213,10 @@ export const Massages = () => {
                     <br />
                     Il peut-être intégré à d{"'"}autres massages de type détox. Trois sortes de pressions vont être
                     appliquées : superficielle, circulatoire et profonde, le réseau lymphatique se situant à divers
-                    niveaux de profondeurs de l{"'"}organisme. Il s'agit d'<b>d{"'"}aider la lymphe à circuler</b> plus
+                    niveaux de profondeurs de l{"'"}organisme. Il s{"'"}agit <b>d{"'"}aider la lymphe à circuler</b> plus
                     rapidement afin d{"'"}
-                    <b>être filtrée vers les ganglions lymphatiques</b>, qui seront préalablement stimulés. L'objectif
-                    de ce massage est de permettre la <b>détoxification générale</b> de l'organisme et de{" "}
+                    <b>être filtrée vers les ganglions lymphatiques</b>, qui seront préalablement stimulés. L{"'"}objectif
+                    de ce massage est de permettre la <b>détoxification générale</b> de l{"'"}organisme et de{" "}
                     <b>renforcer le système immunitaire</b>.
                   </Text>
                   <Text {...textStyles} fontSize="sm" color="gray.500">
@@ -245,10 +245,10 @@ export const Massages = () => {
                   qui perturbent les organes vers l{"'"}extérieur de l{"'"}organisme afin de l{"'"}aider à{" "}
                   <b>se détoxifier et retrouver l{"'"}équilibre de la circulation des énergies</b>. Le ventre étant
                   riche en connexions neuronales (il est appelé 2e cerveau),{" "}
-                  <b>cette région doit être sans tension</b> (nœuds, blocages, congestions) afin que l'énergie vitale
+                  <b>cette région doit être sans tension</b> (nœuds, blocages, congestions) afin que l{"'"}énergie vitale
                   (= le Chi) puisse circuler librement pour le bon fonctionnement des organes. En massant le ventre,
                   on masse les organes de la digestion sur le
-                  <b>plan physique</b>, mais également sur le plan émotionnel (l'intestin grêle fournissant plus de
+                  <b>plan physique</b>, mais également sur le plan émotionnel (l{"'"}intestin grêle fournissant plus de
                   90% de la sérotonine, qui régule les émotions). De part les trajets des méridiens, on touche aussi
                   globalement aux <b>autres systèmes de l{"'"}organisme</b>.
                   <br />

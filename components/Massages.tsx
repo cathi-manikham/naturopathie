@@ -205,7 +205,7 @@ export const Massages = () => {
 									transition="all 0.3s"
 								>
 									<Heading as="h3" color={Colors.darkPink400} size="md" mb={6}>
-										Le drainage manuel bien-être
+										Le Drainage manuel bien-être
 									</Heading>
 									<Text {...textStyles} mb={6}>
 										Ce massage s{"'"}inspire du drainage lymphatique proposé par les kinésithérapeutes, mais n{"'"}est

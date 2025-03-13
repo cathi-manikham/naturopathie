@@ -3,19 +3,18 @@ import { Suspense } from "react";
 import { Naturopathie } from "../../components/Naturopathie";
 import styles from "../Layout.module.css";
 import { Massages } from "@/components/Massages";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://naturopathie.vercel.app/massages"),
-  title: "Naturopathie - Catherine Manikham | Naturopathe",
-  description: `La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie plus simple et proche de la nature, dans le but de garder la santé et de vivre mieux.`,
+  title: "Massages Bien-être & Drainage - Catherine Manikham | Naturopathe",
+  description: `Découvrez nos massages relaxants, drainants et le Chi Nei Tsang. Massages à domicile dans un cadre apaisant pour votre détente et bien-être. Drainage naturopathique disponible au Centre Tout Naturellement.`,
   keywords:
-    "naturopathie, Approche holistique, Médecines naturelles, Soins individualisés,Catherine Manikham, Catherine, Manikham, bien-être, guérison naturelle",
+    "massage relaxant, drainage manuel, Chi Nei Tsang, massage détox, massage à domicile, drainage naturopathique, Catherine Manikham, bien-être, détente, massage ventre",
   openGraph: {
-    title: "Naturopathie - Catherine Manikham | Naturopathe",
+    title: "Massages Bien-être & Drainage - Catherine Manikham | Naturopathe",
     url: "https://naturopathie.vercel.app/massages",
     type: "website",
-    description: `La naturopathie est un art de vivre qui remet l’individu au centre de ses besoins, par le retour à une vie plus simple et proche de la nature, dans le but de garder la santé et de vivre mieux.`,
-    images: "/home.png",
+    description: `Découvrez nos massages relaxants, drainants et le Chi Nei Tsang. Massages à domicile dans un cadre apaisant pour votre détente et bien-être. Drainage naturopathique disponible au Centre Tout Naturellement.`,
+    images: "/massages.png",
   },
 };
 

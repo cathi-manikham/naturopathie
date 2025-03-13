@@ -13,7 +13,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { pricing } from "../data/pricing";
 import { Colors } from "@/theme/colors";
 
@@ -22,6 +22,7 @@ interface PackageTierProps {
   description: string;
   features: Array<{ id: number; desc: string; isValid: boolean }>;
   typePlan: string;
+
 }
 const PackageTier = ({
   title,
@@ -52,9 +53,26 @@ const PackageTier = ({
         <Heading w={{ base: "100%", md: "314px" }} size={"md"}>
           {title}
         </Heading>
-        <Text fontSize='sm' w={{ base: "100%", md: "314px" }} color='gray.400'>
+        <Text fontSize='sm' w={{ base: "100%", md: "314px" }} color='gray.400' whiteSpace="pre-line">
           {description}
         </Text>
+        {title.includes("Massage") && (
+          <Button
+            as={"a"}
+            href="/massages#massages-a-domicile"
+            size='sm'
+            variant="ghost"
+            color={Colors.darkPink500}
+            _hover={{ 
+              bgColor: Colors.lightPink100,
+              textDecoration: "underline"
+            }}
+            rightIcon={<FaArrowRight size="12px" />}
+            alignSelf="flex-start"
+          >
+            Les massages
+          </Button>
+        )}
       </VStack>
       <List spacing={3} textAlign='start'>
         {features.map((desc, id) => (

@@ -41,9 +41,9 @@ export const pricing = [
   },
   {
     id: 3,
-    title: "Massage “détox” (1h)",
+    title: "Massages",
     price: "90 Euros",
-    description: "Le massage “détox” est un massage permettant de dénouer les tensions",
+    description: "• Massage Détox\n• Massage Relaxant\n• Massage à domicile",
     features: [
       { id: 1, desc: "À domicile", isValid: true },
       {
@@ -53,19 +53,5 @@ export const pricing = [
       },
     ],
   },
-  {
-    id: 4,
-    title: "Massage relaxant (1h)",
-    price: "90 Euros",
-    description:
-      "Le massage relaxant est un massage enveloppant, qui vous permettra de déconnecter de votre quotidien.",
-    features: [
-      { id: 1, desc: "À domicile", isValid: true },
-      {
-        id: 2,
-        desc: "Paiement par virement bancaire, chèque, ou espèces",
-        isValid: true,
-      },
-    ],
-  },
+
 ];

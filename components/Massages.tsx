@@ -159,6 +159,7 @@ export const Massages = () => {
 
 						{/* Massages à Domicile Section */}
 						<MotionBox
+							id="massages-a-domicile"
 							initial="hidden"
 							whileInView="visible"
 							viewport={{ once: true }}

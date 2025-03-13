@@ -101,19 +101,19 @@ export const Massages = () => {
 							<VStack spacing={8} align="stretch">
 								<Text {...textStyles}>
 									Les massages sont aussi appelés <b>« techniques manuelles » en naturopathie</b>. Elles font partie des onze
-									techniques que le naturopathe utilise au sein de la cure qu'il propose au client. Elles servent à
+									techniques que le naturopathe utilise au sein de la cure qu{"'"}il propose au client. Elles servent à
 									la <b>détoxification</b>, et à la <b>revitalisation</b>.<br />Contrairement aux exercices physiques, les techniques manuelles et
-									l'<b>hydrothérapie</b> (applications d'eau chaude ou froide de manière localisée, sauna, etc.) sont des <b>techniques
-										passives</b>. Elles permettent de <b>déstabiliser les zones d'accumulation des déchets</b>, et favorisent également le
+									l{"'"}<b>hydrothérapie</b> (applications d{"'"}eau chaude ou froide de manière localisée, sauna, etc.) sont des <b>techniques
+										passives</b>. Elles permettent de <b>déstabiliser les zones d{"'"}accumulation des déchets</b>, et favorisent également le
 									retour veineux et lymphatique, en amenant le mouvement. Elles améliorent les échanges entre le sang et les
-									cellules avec l'accès aux nutriments, le transport et l'élimination des déchets du métabolisme vers les
-									filtres de l'organisme.
+									cellules avec l{"'"}accès aux nutriments, le transport et l{"'"}élimination des déchets du métabolisme vers les
+									filtres de l{"'"}organisme.
 								</Text>
 								<Text {...textStyles}>
-									Dans le cadre d'une <b>détoxification</b>, on les propose notamment dans le cas où vous
+									Dans le cadre d{"'"}une <b>détoxification</b>, on les propose notamment dans le cas où vous
 									avez <b>peu de vitalité</b>.<br />
 									Dans une optique de <b>revitalisation</b>, elles peuvent être intégrées dans une routine
-									d'hygiène de vie pour la <b>récupération musculaire</b> post exercices physiques.
+									d{"'"}hygiène de vie pour la <b>récupération musculaire</b> post exercices physiques.
 								</Text>
 								<Text {...textStyles}>
 									Les massages garantissent la
@@ -140,17 +140,17 @@ export const Massages = () => {
 							<VStack spacing={8} align="stretch">
 								<Text {...textStyles}>
 									Il se pratique au Centre Tout Naturellement. Après deux passages au <b>sauna</b> avec un temps de repos (la chaleur
-									a un effet vasodilatateur, le froid un effet vasoconstricteur, le repos permet d'équilibrer à nouveau la
+									a un effet vasodilatateur, le froid un effet vasoconstricteur, le repos permet d{"'"}équilibrer à nouveau la
 									répartition des liquides – sang, lymphe, liquide interstitiel - dans le corps), <b>pour faire remonter les
 										déchets à la périphérie du corps</b>.<br />Vous pouvez vous faire <b>masser</b>, afin de <b>déloger les déchets des zones de
 											tensions</b> des tissus et des muscles qui se trouvent plus en profondeur (peau qui ne se décolle pas, sensation
-									de grains de sable, « nœuds » musculaires, etc.). Un dernier passage au sauna, permettra <b>d'éliminer par la
+									de grains de sable, « nœuds » musculaires, etc.). Un dernier passage au sauna, permettra <b>d{"'"}éliminer par la
 										transpiration</b>, ce qui a été mobilisé pendant le drainage naturopathique.
 								</Text>
 								<Text {...textStyles}>
-									Ce n'est pas un massage que je
-									propose en dehors du Centre Tout Naturellement car, hors d'une cure naturopathique, et sans hygiène de vie
-									adaptée et amorcée, c'est un massage qui peut être douloureux. Des effets secondaires indésirables peuvent
+									Ce n{"'"}est pas un massage que je
+									propose en dehors du Centre Tout Naturellement car, hors d{"'"}une cure naturopathique, et sans hygiène de vie
+									adaptée et amorcée, c{"'"}est un massage qui peut être douloureux. Des effets secondaires indésirables peuvent
 									se manifester selon le niveau des déchets du métabolisme circulants qui ne trouvent pas la porte de sortie
 									par les organes émonctoires (peau, poumons, reins, foie et intestin).
 								</Text>
@@ -180,7 +180,7 @@ export const Massages = () => {
 										Les massages relaxant et « détox »
 									</Heading>
 									<Text {...textStyles} mb={6}>
-										Dans ces deux types de massages, les techniques sont <b>enveloppantes et englobantes</b> afin de favoriser <b>l'état
+										Dans ces deux types de massages, les techniques sont <b>enveloppantes et englobantes</b> afin de favoriser <b>l{"'"}état
 											de détente</b>. On cherche également à <b>dénouer les tensions</b>, de manière douce.
 									</Text>
 									<Text {...textStyles} fontSize="sm" color="gray.500">
@@ -195,10 +195,10 @@ export const Massages = () => {
 										Le drainage manuel bien-être
 									</Heading>
 									<Text {...textStyles} mb={6}>
-										Ce massage s'inspire du drainage lymphatique proposé par les kinésithérapeutes, mais n'est cependant pas à
-										visée médicale.<br />Il peut-être intégré à d'autres massages de type détox. Trois sortes de pressions vont être
+										Ce massage s{"'"}inspire du drainage lymphatique proposé par les kinésithérapeutes, mais n{"'"}est cependant pas à
+										visée médicale.<br />Il peut-être intégré à d{"'"}autres massages de type détox. Trois sortes de pressions vont être
 										appliquées : superficielle, circulatoire et profonde, le réseau lymphatique se situant à divers niveaux de
-										profondeurs de l'organisme.
+										profondeurs de l{"'"}organisme.
 									</Text>
 									<Text {...textStyles} fontSize="sm" color="gray.500">
 										Contre-indications : opération récente, inflammations articulaires, insuffisances cardiaque ou rénale, maladies de peau, être enceinte,
@@ -213,8 +213,8 @@ export const Massages = () => {
 									</Heading>
 									<Text {...textStyles }  mb={6}>
 										Originaire de la Chine Taoïste, ce massage du ventre a pour objectif de guider les « vents viciés » qui
-										perturbent les organes vers l'extérieur de l'organisme afin de l'aider à <b>se détoxifier et retrouver
-											l'équilibre de la circulation des énergies</b>.
+										perturbent les organes vers l{"'"}extérieur de l{"'"}organisme afin de l{"'"}aider à <b>se détoxifier et retrouver
+											l{"'"}équilibre de la circulation des énergies</b>.
 									</Text>
 									<Text {...textStyles} fontSize="sm" color="gray.500">
 										Contre-indications : opération récente, porter un stérilet, être enceinte, porter un pacemaker, problèmes circulatoires, etc.
